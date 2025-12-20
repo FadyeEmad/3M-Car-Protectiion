@@ -130,6 +130,7 @@ section {
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .section-title h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
@@ -268,4 +269,126 @@ footer {
     height: 200px;
     object-fit: cover;
     display: block;
+}
+#cars-gallery {
+    padding: 5rem 2rem;
+    background-color: #000;
+}
+
+#cars-gallery .section-title h2 {
+    color: #fff;
+}
+
+#cars-gallery .section-title p {
+    color: #aaa;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.credit {
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.credit a {
+    color: #e10600;
+    text-decoration: none;
+}
+
+.credit a:hover {
+    text-decoration: underline;
+}
+/* Cars Slider */
+.slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scroll 15s linear infinite;
+}
+
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+.slider .card {
+    min-width: 300px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Modal Alert */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-box {
+    background: #111;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    animation: scaleIn 0.3s ease;
+}
+
+.modal-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.modal-box p {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
